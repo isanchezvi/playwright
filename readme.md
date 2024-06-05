@@ -1,17 +1,18 @@
-Getting Started
-To get started with this project, clone the repository and install the necessary dependencies.
+Comenzando
+Para comenzar con este proyecto, clona el repositorio e instala las dependencias necesarias.
 
-Configuration
-The configuration for the sandbox environment is stored in a config.json file. This file contains the following properties:
+Configuración
+La configuración para el entorno de pruebas se almacena en un archivo config.json. Este archivo contiene las siguientes propiedades:
 
-sandbox: This object contains the base URL (urlStart) and the sandbox number (sandboxNumber). The sandbox number can be any number from 001 to 999. The full URL is constructed by prefixing the base URL with https:// and suffixing it with the sandbox number. For example, if your sandbox number is 003 and your base URL is bkfb-, the full URL will be https://bkfb-003.
+sandbox: Este objeto contiene la URL base (urlStart) y el número de la caja de pruebas (sandboxNumber). El número de la caja de pruebas puede ser cualquier número del 001 al 999. La URL completa se construye añadiendo https:// al inicio de la URL base y añadiendo el número de la caja de pruebas al final. Por ejemplo, si tu número de caja de pruebas es 003 y tu URL base es bkfb-, la URL completa será https://bkfb-003.
 
-urls: This object contains the relative paths for the home and clubby pages. These paths are appended to the full URL to access the respective pages.
+urls: Este objeto contiene las rutas relativas para las páginas de inicio y de inicio de sesión. Estas rutas se añaden a la URL completa para acceder a las respectivas páginas.
 
-credentials: This object contains the username and password for the sandbox environment.
+credentials: Este objeto contiene el nombre de usuario y la contraseña para el entorno de pruebas.
 
-Here's an example of a config.json file:
+Aquí tienes un ejemplo de un archivo config.json:
 
+```
 {
     "sandbox": {
         "urlStart": "https://bkfb-",
@@ -19,10 +20,17 @@ Here's an example of a config.json file:
     },
     "urls": {
       "home": ".dx.commercecloud.salesforce.com/s/sss/home",
-      "clubby": ".dx.commercecloud.salesforce.com/s/sss/login.html"
+      "inicioSesion": ".dx.commercecloud.salesforce.com/s/sss/login.html"
     },
     "credentials": {
-      "username": "user",
-      "password": "pass"
+      "nombreUsuario": "usuario",
+      "contraseña": "contraseña"
     }
 }
+```
+Ejecución de pruebas
+
+```
+npx playwright test
+```
+
