@@ -1,0 +1,14 @@
+{
+    "sandbox": {
+        "urlStart": "https://bkfz-",
+        "sandboxNumber": "003"
+    },
+    "urls": {
+      "home": ".dx.commercecloud.salesforce.com/s/s/home",
+      "clubby": ".dx.commercecloud.salesforce.com/s/s/s.html"
+    },
+    "credentials": {
+      "username": "user",
+      "password": "pass"
+    }
+}
